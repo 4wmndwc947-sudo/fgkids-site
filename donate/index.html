@@ -57,13 +57,19 @@
             This iframe points at the FG Kids Zeffy campaign. If it doesn't render once live,
             grab the exact embed snippet from the Zeffy dashboard ("Share" > "Embed on my website")
             and swap the src below — Zeffy occasionally changes embed parameters per campaign.
-            Direct link (always works as a fallback): 
+            Direct link (always works as a fallback):
             https://www.zeffy.com/en-US/donation-form/culinary-nutrition-steam-lab-for-evans-highschool
+
+            Height note: the fixed height below is sized to the compact "amount + continue" form.
+            Zeffy doesn't publish a resize script for custom-site embeds, so if the campaign form
+            grows (e.g. more fields are turned on in the Zeffy dashboard), the iframe scrolls
+            internally rather than showing dead space — bump the height a bit if that happens.
           -->
           <iframe
             title="FG Kids Donation Form"
             src="https://www.zeffy.com/embed/donation-form/culinary-nutrition-steam-lab-for-evans-highschool"
-            style="width:100%; min-height:1150px; border:none;"
+            style="width:100%; height:820px; border:none; display:block;"
+            scrolling="auto"
             allow="payment">
           </iframe>
         </div>
