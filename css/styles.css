@@ -205,7 +205,7 @@ nav.main-nav a.current{color:var(--forest); background:var(--cream-soft);}
 .hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
 
 /* -------------------- floating glass logo tile -------------------- */
-.spin-tile-wrap{margin:clamp(18px,3.4vw,30px) auto clamp(14px,2.6vw,24px); display:flex; justify-content:center;}
+.spin-tile-wrap{margin:0 auto clamp(16px,3vw,28px); display:flex; justify-content:center;}
 .spin-tile-stage{
   width:clamp(110px,16vw,156px); height:clamp(110px,16vw,156px);
   position:relative;
@@ -247,7 +247,7 @@ nav.main-nav a.current{color:var(--forest); background:var(--cream-soft);}
 }
 .spin-tile-face--back{transform:rotateY(180deg);}
 .spin-tile-face img{
-  width:56%; height:auto;
+  width:78%; height:auto;
   filter:drop-shadow(0 5px 12px rgba(22,48,42,.28));
 }
 @keyframes tileFloat{0%,100%{transform:translateY(0);} 50%{transform:translateY(-14px);}}
