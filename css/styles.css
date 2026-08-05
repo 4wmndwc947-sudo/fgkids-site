@@ -738,3 +738,41 @@ figure.fig figcaption{
 .sources ol{padding-left:1.3em; margin:0;}
 .sources li{margin-bottom:.7em; line-height:1.55;}
 .sources a{color:var(--forest-3);}
+
+/* -------------------- newsletter signup -------------------- */
+.signup{margin-top:.2em;}
+.signup-row{display:flex; gap:8px; margin-top:.9em; flex-wrap:wrap;}
+.signup-row input[type="email"]{
+  flex:1 1 200px; min-width:0;
+  font-family:var(--font-body); font-size:.95rem;
+  padding:12px 16px; border-radius:999px;
+  border:1px solid var(--line); background:#fff; color:var(--ink);
+}
+.signup-row input[type="email"]:focus{outline:2px solid var(--teal); outline-offset:1px;}
+.signup-row button{
+  font-family:var(--font-body); font-weight:700; font-size:.95rem;
+  padding:12px 24px; border-radius:999px; border:none; cursor:pointer;
+  background:var(--coral); color:#fff; transition:background .15s ease;
+}
+.signup-row button:hover{background:var(--coral-dark);}
+.signup-note{font-size:.82rem; color:var(--ink-soft); margin-top:.7em;}
+.signup-hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+
+/* footer variant */
+.site-footer .signup-row input[type="email"]{
+  background:rgba(247,242,231,.08); border-color:var(--line-on-dark); color:var(--cream-on-dark);
+}
+.site-footer .signup-row input[type="email"]::placeholder{color:rgba(247,242,231,.5);}
+.site-footer .signup-note{color:rgba(247,242,231,.6);}
+
+/* inline (on-soft) variant */
+.signup-inline{
+  border:1px solid var(--line); border-radius:var(--radius);
+  padding:clamp(22px,3vw,34px); background:var(--cream);
+  max-width:620px; margin:2.4em auto 0; text-align:center;
+}
+.signup-inline h3{margin-bottom:.3em;}
+.signup-inline .signup-row{justify-content:center;}
+
+/* thank-you page */
+.thanks-wrap{min-height:52vh; display:flex; align-items:center;}
