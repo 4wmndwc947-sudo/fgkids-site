@@ -49,6 +49,23 @@ document.addEventListener('DOMContentLoaded', function () {
     countEls.forEach(function (el) { obs.observe(el); });
   }
 
+  // Comparison bars on lesson pages — fill on scroll into view
+  var bars = document.querySelectorAll('[data-bar]');
+  if (bars.length) {
+    if (reduceMotion) {
+      bars.forEach(function (b) { b.style.width = b.getAttribute('data-bar') + '%'; });
+    } else {
+      var barObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.style.width = entry.target.getAttribute('data-bar') + '%';
+          barObs.unobserve(entry.target);
+        });
+      }, { threshold: 0.35 });
+      bars.forEach(function (b) { barObs.observe(b); });
+    }
+  }
+
   // Carousel (blueprint slides on the STEAM Labs page)
   document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
     var slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
