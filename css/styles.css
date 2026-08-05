@@ -127,9 +127,11 @@ nav.main-nav a.current{color:var(--forest); background:var(--cream-soft);}
 
 @media (max-width:920px){
   nav.main-nav{
-    position:fixed; inset:64px 0 0 0; background:var(--cream);
+    position:absolute; top:100%; left:0; right:0;
+    max-height:calc(100vh - 64px);
+    background:var(--cream); border-bottom:1px solid var(--line);
     flex-direction:column; align-items:stretch; padding:12px var(--pad);
-    display:none; overflow-y:auto;
+    display:none; overflow-y:auto; z-index:60;
   }
   nav.main-nav.open{display:flex;}
   nav.main-nav a{padding:16px 4px; border-bottom:1px solid var(--line); border-radius:0;}
